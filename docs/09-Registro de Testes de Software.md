@@ -27,8 +27,8 @@ Este é um registro de testes executados para caso de teste definido no Plano de
         <td>28/10/2022</td>
         <td>RF-02: Verificar se as informações armazenadas do perfil dos usuários podem ser editadas ou atualizadas.</td>
         <td>1. Executar alteração de dados de usuário existente no banco de dados; 2. Verificar se as mudanças foram aplicadas no banco.</td>
-        <td>O teste foi executado com sucesso</td>
-        <td></td>
+        <td>O teste foi executado, mas não foi obtido sucesso</td>
+        <td>Não foi possível alterar os dados do usuário no banco de dados através das funcionalidades disponíveis na interface, será corrigido nas próximas etapas.</td>
     </tr>
     <tr>
         <td>N/D</td>
