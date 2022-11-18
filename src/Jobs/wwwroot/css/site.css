@@ -82,7 +82,7 @@ a.navbar-brand {
 }
 
 a {
-  color: #fff;
+  color: #0000ff;
 }
 
 .btn-primary {
@@ -129,6 +129,7 @@ html {
 
 body {
   margin-bottom: 60px;
+  font-family: 'Roboto', sans-serif;
 }
 .footer {
   position: absolute;

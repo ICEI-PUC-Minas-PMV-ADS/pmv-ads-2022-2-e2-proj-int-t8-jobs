@@ -1,8 +1,7 @@
 ﻿@page
 @model RegisterModel
-
-@{
-    ViewData["Title"] = "Bem vindo à página de cadastro!";
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
 }
 
 <style>
@@ -10,41 +9,74 @@
         background-image: linear-gradient(to left,#722f37, #F7B4A7);
     }
 </style>
-<div class="container">
-    <div class="d-flex justify-content-center flex-row w-100 mb-5">
-        <h1 class="shadow p-3 mb-2 bg-body rounded" style="color: #94DDDE">@ViewData["Title"]</h1>
-        
-    </div>
-    <div class="d-flex justify-content-center flex-row w-100 mb-5">
-        <img src="~/assets/jobs.gif" class="h-50 w-50 img-fluid" alt="img-jobs" />
-      </div>
 
-    <div class="d-flex justify-content-center flex-row w-100 mb-5">
-        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-            <h4 class="app-color-light-blue shadow p-3 mb-2 bg-body rounded"><strong>Cadastre-se para ter acesso a nossa plataforma:</strong></h4>
-            <hr />
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Input.Email"></label>
-                <input asp-for="Input.Email" class="form-control" />
-                <span asp-validation-for="Input.Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Input.Password"></label>
-                <input asp-for="Input.Password" class="form-control" />
-                <span asp-validation-for="Input.Password" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Input.ConfirmPassword"></label>
-                <input asp-for="Input.ConfirmPassword" class="form-control" />
-                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-            </div>
-            <button type="submit" class="btn btn-info btn-lg w-100">Cadastrar</button>
-        </form>
-    </div>
-  
-</div>
+<section class="h-100 h-custom gradient-custom-2">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card card-registration card-registration-2" style="border-radius: 15px;">
+                    <div class="card-body p-5">
+                        <div class="text-center">
+                            <img src="/assets/jobs-static.png"
+                                 style="width: 250px; border-radius: 15px; margin-top: 25px; margin-bottom: 25px;" alt="logo">
+                            <h4 style="color: lightcoral" class="mt-1 mb-5 pb-1">Registre-se e conheça nossos serviços</h4>
+                        </div>
 
-@section Scripts {
-    <partial name="_ValidationScriptsPartial" />
-}
+                        <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input asp-for="Input.FirstName" type="text" id="form3Example1n" class="form-control form-control-lg" />
+                                        <label asp-for="Input.FirstName" class="form-label" for="form3Example1n">Nome</label>
+                                        <span asp-validation-for="Input.FirstName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline">
+                                        <input asp-for="Input.LastName" type="text" id="form3Example1n" class="form-control form-control-lg" />
+                                        <label asp-for="Input.LastName" class="form-label" for="form3Example1n">Sobrenome</label>
+                                        <span asp-validation-for="Input.LastName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <input asp-for="Input.Email" type="email" id="form3Example3" class="form-control form-control-lg"
+                                       placeholder="Insira um email válido" />
+                                <label asp-for="Input.Email" class="form-label" for="form3Example3">Email</label>
+                                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-outline mb-3">
+                                <input asp-for="Input.Password" type="password" id="form3Example4" class="form-control form-control-lg"
+                                       placeholder="Insira uma senha" />
+                                <label asp-for="Input.Password" class="form-label" for="form3Example4">Senha</label>
+                                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-outline mb-3">
+                                <input asp-for="Input.ConfirmPassword" type="password" id="form3Example4" class="form-control form-control-lg"
+                                       placeholder="Repita a senha" />
+                                <label asp-for="Input.ConfirmPassword" class="form-label" for="form3Example4">Confirme a Senha</label>
+                                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                            </div>
+
+                            <div class="text-center text-lg-start mt-4 pt-2">
+                                <button type="submit" class="btn btn-primary btn-lg mb-2"
+                                        style="padding-left: 2rem; padding-right: 2rem;">
+                                    Criar conta
+                                </button>
+
+                                <a asp-page="./Login" type="button" class="btn btn-danger btn-lg mb-2"
+                                   style="padding-left: 2rem; padding-right: 2rem;">
+                                    Fazer login
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
