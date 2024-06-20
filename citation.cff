@@ -1,0 +1,25 @@
+message: Please cite this software using these metadata.
+title: Jobs
+authors:
+  - family-names: Shinaede
+    given-names:  Raul
+  - family-names: Sellas
+    given-names:  Bruno
+  - family-names: Xavier
+    given-names:  Leonardo
+  - family-names: Carvalho
+    given-names:  Alisson
+  - family-names: Luiz
+    given-names:  Vinícius
+  - family-names: 
+    given-names:  
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Carvalho Monteiro Ferreira
+    given-names:  Daniele
+keywords:
+  - Emprego
+  - Vagas	
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2022-2-e2-proj-int-t8-jobs
+version: 1.0.0
+date-released: 2022-11-30
